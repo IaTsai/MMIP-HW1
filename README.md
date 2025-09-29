@@ -17,8 +17,8 @@ This project implements basic digital image processing functions including image
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd HW1_Dday_929
+git clone https://github.com/IaTsai/MMIP-HW1.git
+cd MMIP-HW1
 
 # Create virtual environment (recommended)
 python -m venv venv
@@ -38,6 +38,7 @@ pip install -r requirements.txt
 ### 2. Test Data
 
 The test images are included in the `data/` folder:
+
 - RAW files (256KB each): `lena.raw`, `goldhill.raw`, `peppers.raw`
 - BMP files (257KB each): `boat.bmp`, `baboon.bmp`, `F16.bmp`
 
@@ -168,6 +169,7 @@ lena.raw 中心10x10像素值:
 ### Visual Results Preview
 
 Each enhancement image will show 6 versions side-by-side:
+
 1. **Original**: The input image
 2. **Log Transform**: Brightened dark regions, useful for low-contrast images
 3. **Gamma (γ=0.5)**: Brightened overall (power-law transformation)
@@ -176,6 +178,7 @@ Each enhancement image will show 6 versions side-by-side:
 6. **Negative**: Inverted intensities (255 - pixel_value)
 
 The resize comparisons will show:
+
 - **Nearest Neighbor**: Blocky/pixelated when upsampling, faster
 - **Bilinear**: Smoother results, better quality but slower
 
@@ -209,6 +212,7 @@ The resize comparisons will show:
 Test images are included in the `data/` folder:
 
 - **RAW format** (512x512, 8-bit grayscale):
+
   - `lena.raw` (256KB)
   - `goldhill.raw` (256KB)
   - `peppers.raw` (256KB)
@@ -225,12 +229,15 @@ Test images are included in the `data/` folder:
 ### Common Issues
 
 1. **FileNotFoundError: No such file or directory: 'data/lena.raw'**
+
    - Solution: Make sure you've created the `data/` folder and placed all test images inside
 
 2. **ValueError: cannot reshape array**
+
    - Solution: Ensure RAW files are exactly 512×512 pixels (262,144 bytes)
 
 3. **No output files generated**
+
    - Solution: Check if `output/` folder exists; the program will create it automatically
 
 4. **ImportError: No module named 'PIL'**
