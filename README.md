@@ -1,4 +1,4 @@
-# HW1: Digital Image Processing - Image Reading and Point Operations
+# HW1: Multi-Modality Image Processing - Image Reading and Point Operations
 
 ## Overview
 
