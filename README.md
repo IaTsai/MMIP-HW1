@@ -4,10 +4,9 @@
 
 This project implements basic digital image processing functions including image reading, enhancement operations, and resampling techniques.
 
-### 🎨 Visual Demo
+### Visual Demo
 
-![Enhancement Demo](output/part_b_enhancement_0_lena.png)
-*Complete image processing pipeline: from basic reading to advanced enhancement techniques*
+> Note: If images are not displaying, please run the program first to generate output files in the `output/` directory.
 
 ## Requirements
 
@@ -197,9 +196,8 @@ The resize comparisons will show:
 
 #### Sample Output
 All six test images loaded and displayed in a grid:
-
-![Original Images](output/part_a_original_images.png)
-*Figure 1: Six test images - (Top) RAW format: Lena, Goldhill, Peppers; (Bottom) BMP format: Boat, Baboon, F16*
+- **RAW format**: Lena, Goldhill, Peppers (top row)
+- **BMP format**: Boat, Baboon, F16 (bottom row)
 
 ### Part B: Image Enhancement
 
@@ -209,11 +207,13 @@ All six test images loaded and displayed in a grid:
 
 #### Enhancement Results
 
-![Lena Enhancement](output/part_b_enhancement_0_lena.png)
-*Figure 2: Enhancement results on Lena image - showing Original, Log Transform, Gamma corrections (γ=0.5, 1.5, 2.2), and Negative*
-
-![Goldhill Enhancement](output/part_b_enhancement_1_goldhill.png)
-*Figure 3: Enhancement results on Goldhill image - demonstrating different point operations*
+The program generates comparison images showing:
+- **Original image**
+- **Log Transform**: Enhances details in dark regions
+- **Gamma Correction** (γ=0.5): Brightens the image
+- **Gamma Correction** (γ=1.5): Slightly darkens the image
+- **Gamma Correction** (γ=2.2): Standard monitor correction
+- **Negative**: Inverts all pixel values
 
 ### Part C: Image Resampling
 
@@ -228,11 +228,16 @@ All six test images loaded and displayed in a grid:
 
 #### Resampling Comparison
 
-![Downsampling](output/part_c_resize_512512_to_128128.png)
-*Figure 4: Downsampling comparison (512×512 to 128×128) - Original, Nearest Neighbor, and Bilinear interpolation*
+The program compares two interpolation methods:
+- **Nearest Neighbor**: Faster but produces blocky artifacts
+- **Bilinear Interpolation**: Slower but produces smoother results
 
-![Upsampling](output/part_c_resize_3232_to_512512.png)
-*Figure 5: Upsampling comparison (32×32 to 512×512) - showing the difference between interpolation methods when enlarging images*
+Output files demonstrate the quality difference in various scenarios:
+- Downsampling (512×512 to 128×128)
+- Extreme downsampling (512×512 to 32×32)
+- Upsampling (32×32 to 512×512)
+- Non-uniform scaling (512×512 to 1024×512)
+- Aspect ratio change (128×128 to 256×512)
 
 ## Key Results and Comparisons
 
@@ -252,23 +257,25 @@ When upsampling from 32×32 to 512×512:
 - **Processing Speed**: All operations complete in < 1 second for 512×512 images
 - **Quality Trade-off**: Bilinear interpolation takes ~4x longer but produces significantly better visual quality
 
-## Visual Gallery
+## Output Files Structure
 
-<details>
-<summary>📸 Click to see more output examples</summary>
+After running the program, the following files will be generated in the `output/` directory:
 
-#### All Test Images
-![All Images](output/part_a_original_images.png)
-
-#### Enhancement Examples
-- ![Baboon Enhancement](output/part_b_enhancement_4_baboon.png)
-- ![F16 Enhancement](output/part_b_enhancement_5_F16.png)
-
-#### Resampling Examples
-- ![Non-uniform Scaling](output/part_c_resize_512512_to_1024512.png)
-- ![Aspect Ratio Change](output/part_c_resize_128128_to_256512.png)
-
-</details>
+```
+output/
+├── part_a_original_images.png          # All 6 test images in a grid
+├── part_b_enhancement_0_lena.png       # Lena enhancement results
+├── part_b_enhancement_1_goldhill.png   # Goldhill enhancement results
+├── part_b_enhancement_2_peppers.png    # Peppers enhancement results
+├── part_b_enhancement_3_boat.png       # Boat enhancement results
+├── part_b_enhancement_4_baboon.png     # Baboon enhancement results
+├── part_b_enhancement_5_F16.png        # F16 enhancement results
+├── part_c_resize_512512_to_128128.png  # Downsampling comparison
+├── part_c_resize_512512_to_3232.png    # Extreme downsampling
+├── part_c_resize_3232_to_512512.png    # Upsampling comparison
+├── part_c_resize_512512_to_1024512.png # Non-uniform scaling
+└── part_c_resize_128128_to_256512.png  # Aspect ratio change
+```
 
 ## Data Files
 
