@@ -6,7 +6,8 @@ This project implements basic digital image processing functions including image
 
 ### Visual Demo
 
-> Note: If images are not displaying, please run the program first to generate output files in the `output/` directory.
+![Enhancement Demo](Example_outputImage/part_b_enhancement_0_lena.png)
+*Complete image processing pipeline: from basic reading to advanced enhancement techniques*
 
 ## Requirements
 
@@ -196,8 +197,9 @@ The resize comparisons will show:
 
 #### Sample Output
 All six test images loaded and displayed in a grid:
-- **RAW format**: Lena, Goldhill, Peppers (top row)
-- **BMP format**: Boat, Baboon, F16 (bottom row)
+
+![Original Images](Example_outputImage/part_a_original_images.png)
+*Figure 1: Six test images - (Top) RAW format: Lena, Goldhill, Peppers; (Bottom) BMP format: Boat, Baboon, F16*
 
 ### Part B: Image Enhancement
 
@@ -207,13 +209,11 @@ All six test images loaded and displayed in a grid:
 
 #### Enhancement Results
 
-The program generates comparison images showing:
-- **Original image**
-- **Log Transform**: Enhances details in dark regions
-- **Gamma Correction** (γ=0.5): Brightens the image
-- **Gamma Correction** (γ=1.5): Slightly darkens the image
-- **Gamma Correction** (γ=2.2): Standard monitor correction
-- **Negative**: Inverts all pixel values
+![Lena Enhancement](Example_outputImage/part_b_enhancement_0_lena.png)
+*Figure 2: Enhancement results on Lena image - showing Original, Log Transform, Gamma corrections (γ=0.5, 1.5, 2.2), and Negative*
+
+![Goldhill Enhancement](Example_outputImage/part_b_enhancement_1_goldhill.png)
+*Figure 3: Enhancement results on Goldhill image - demonstrating different point operations*
 
 ### Part C: Image Resampling
 
@@ -228,16 +228,11 @@ The program generates comparison images showing:
 
 #### Resampling Comparison
 
-The program compares two interpolation methods:
-- **Nearest Neighbor**: Faster but produces blocky artifacts
-- **Bilinear Interpolation**: Slower but produces smoother results
+![Downsampling](Example_outputImage/part_c_resize_512512_to_128128.png)
+*Figure 4: Downsampling comparison (512×512 to 128×128) - Original, Nearest Neighbor, and Bilinear interpolation*
 
-Output files demonstrate the quality difference in various scenarios:
-- Downsampling (512×512 to 128×128)
-- Extreme downsampling (512×512 to 32×32)
-- Upsampling (32×32 to 512×512)
-- Non-uniform scaling (512×512 to 1024×512)
-- Aspect ratio change (128×128 to 256×512)
+![Upsampling](Example_outputImage/part_c_resize_3232_to_512512.png)
+*Figure 5: Upsampling comparison (32×32 to 512×512) - showing the difference between interpolation methods when enlarging images*
 
 ## Key Results and Comparisons
 
