@@ -1,0 +1,4 @@
+# Core dependencies for HW1 Image Processing
+numpy>=1.19.0
+Pillow>=8.0.0
+matplotlib>=3.3.0

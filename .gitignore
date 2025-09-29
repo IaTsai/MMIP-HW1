@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+output/*.png
+output/*.jpg
+output/*.bmp
+
+# Compressed files
+*.7z
+*.zip
+*.tar.gz
+
+# Data files are small enough to include (1.5MB total)
+# Keeping data/ folder in repository
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# LaTeX
+latex_report/*.aux
+latex_report/*.log
+latex_report/*.out
+latex_report/*.toc
+latex_report/*.synctex.gz
+latex_report/*.fls
+latex_report/*.fdb_latexmk
